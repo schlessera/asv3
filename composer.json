@@ -1,0 +1,25 @@
+{
+    "name": "schlessera/asv3",
+    "description": "Personal homepage of Alain Schlesser - version 3",
+    "type": "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "wecodemore/wpstarter": "~2.0",
+        "wpackagist-theme/twentytwenty": "^1.1"
+    },
+    "config": {
+        "vendor-dir": "wp-content/vendor"
+    },
+    "scripts": {
+        "post-install-cmd": "WCM\\WPStarter\\Setup::run",
+        "post-update-cmd": "WCM\\WPStarter\\Setup::run"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp"
+    }
+}
