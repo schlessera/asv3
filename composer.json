@@ -1,25 +1,52 @@
 {
-    "name": "schlessera/asv3",
-    "description": "Personal homepage of Alain Schlesser - version 3",
-    "type": "project",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://wpackagist.org"
-        }
-    ],
-    "require": {
-        "wecodemore/wpstarter": "~2.0",
-        "wpackagist-theme/twentytwenty": "^1.1"
-    },
-    "config": {
-        "vendor-dir": "wp-content/vendor"
-    },
-    "scripts": {
-        "post-install-cmd": "WCM\\WPStarter\\Setup::run",
-        "post-update-cmd": "WCM\\WPStarter\\Setup::run"
-    },
-    "extra": {
-        "wordpress-install-dir": "wp"
-    }
+	"name": "schlessera/asv3",
+	"description": "Personal homepage of Alain Schlesser - version 3",
+	"type": "project",
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/schlessera/asv3-theme"
+		}
+	],
+	"require": {
+		"wecodemore/wpstarter": "~2.0",
+		"schlessera/asv3-theme": "dev-master"
+	},
+	"config": {
+		"vendor-dir": "wp-content/vendor"
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"WCM\\WPStarter\\Setup::run",
+			"wp theme activate asv3-theme"
+		],
+		"post-update-cmd": [
+			"WCM\\WPStarter\\Setup::run",
+			"wp theme activate asv3-theme"
+		]
+	},
+	"extra": {
+		"wordpress-install-dir": "wp",
+        "wordpress-content-dir": "wp-content",
+		"installer-paths": {
+			"wp-content/plugins/{$name}": [
+				"type:wordpress-plugin"
+			],
+			"wp-content/mu-plugins/{$name}": [
+				"type:wordpress-muplugin"
+			],
+			"wp-content/themes/{$name}": [
+				"type:wordpress-theme"
+			]
+		}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require-dev": {
+		"composer/installers": "^1.7"
+	}
 }
