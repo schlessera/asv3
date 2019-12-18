@@ -13,13 +13,14 @@ jobs:
     - name: Create empty .env file
       run: touch .env
 
-    - uses: smac89/default-env@v1
-      env:
-        DB_HOST: 'localhost'
-        DB_NAME: 'asv3_test'
-        DB_PORT: 3306
-        DB_USER: 'root'
-        DB_PASS: 'root'
+      - name: Set environment variables
+        uses: allenevans/set-env@v1.0.0
+        with:
+          DB_HOST: 'localhost'
+          DB_NAME: 'asv3_test'
+          DB_PORT: 3306
+          DB_USER: 'root'
+          DB_PASS: 'root'
 
     - name: Validate composer.json and composer.lock
       run: composer validate
