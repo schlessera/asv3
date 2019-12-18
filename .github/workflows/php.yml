@@ -38,7 +38,9 @@ jobs:
       run: composer install --prefer-dist --no-progress --no-suggest
 
     - name: Verify WP-CLI environment
-      run: wp-content/vendor/bin/wp cli info --debug
+      run: |
+        wp-content/vendor/bin/wp cli info --debug
+        wp-content/vendor/bin/wp config list
 
     - name: Prepare environment
       run: composer prepare
