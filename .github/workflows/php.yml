@@ -10,6 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
+    - name: Create empty .env file
+      run: touch .env
+
     - name: Validate composer.json and composer.lock
       run: composer validate
 
