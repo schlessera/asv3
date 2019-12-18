@@ -21,19 +21,18 @@
 	},
 	"scripts": {
 		"post-install-cmd": [
-			"WCM\\WPStarter\\Setup::run",
-			"wp theme activate asv3-theme"
+			"WCM\\WPStarter\\Setup::run"
 		],
 		"post-update-cmd": [
-			"WCM\\WPStarter\\Setup::run",
+			"WCM\\WPStarter\\Setup::run"
+		],
+		"prepare": [
+			"wp db create",
 			"wp theme activate asv3-theme"
 		],
 		"test": [
 			"codecept run"
 		],
-		"cheer": [
-			"ponysay Yeah"
-		]
 	},
 	"extra": {
 		"wordpress-install-dir": "wp",

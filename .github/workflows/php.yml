@@ -20,7 +20,7 @@ jobs:
       run: composer install --prefer-dist --no-progress --no-suggest
 
     - name: Setup database
-      run: wp db create
+      run: composer prepare
 
     - name: Run test suite
       run: composer test
