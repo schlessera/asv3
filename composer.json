@@ -32,7 +32,7 @@
 		],
 		"test": [
 			"codecept run"
-		],
+		]
 	},
 	"extra": {
 		"wordpress-install-dir": "wp",
