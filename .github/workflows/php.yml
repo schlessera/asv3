@@ -17,7 +17,7 @@ jobs:
         echo "DB_NAME=asv3_test" >> .env
         echo "DB_PORT=3306" >> .env
         echo "DB_USER=root" >> .env
-        echo "DB_PASS=root" >> .env
+        echo "DB_PASSWORD=root" >> .env
 
     - name: Get Composer Cache Directory
       id: composer-cache
