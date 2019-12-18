@@ -54,6 +54,7 @@
 	"prefer-stable": true,
 	"require-dev": {
 		"composer/installers": "^1.7",
-		"codeception/codeception": "^3.1"
+		"codeception/codeception": "^3.1",
+		"wp-cli/extension-command": "^2.0"
 	}
 }
