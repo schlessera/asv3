@@ -22,10 +22,16 @@ jobs:
         DB_USER: 'root'
         DB_PASS: 'root'
 
+    - name: Printenv
+      run: |
+        echo "MY_ENV_VAR=${MY_ENV_VAR}"
+        printenv
+
     - name: Get Composer Cache Directory
       id: composer-cache
       run: |
         echo "::set-output name=dir::$(composer config cache-files-dir)"
+
     - uses: actions/cache@v1
       with:
         path: ${{ steps.composer-cache.outputs.dir }}
