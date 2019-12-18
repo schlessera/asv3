@@ -27,6 +27,12 @@
 		"post-update-cmd": [
 			"WCM\\WPStarter\\Setup::run",
 			"wp theme activate asv3-theme"
+		],
+		"test": [
+			"codecept run"
+		],
+		"cheer": [
+			"ponysay Yeah"
 		]
 	},
 	"extra": {
@@ -47,6 +53,7 @@
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"require-dev": {
-		"composer/installers": "^1.7"
+		"composer/installers": "^1.7",
+		"codeception/codeception": "^3.1"
 	}
 }
