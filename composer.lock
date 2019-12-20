@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fea976d38eba6b1ffdeb662c24fc21b1",
+    "content-hash": "6721772c34f8b11ec9ff0de1d1919b07",
     "packages": [
         {
             "name": "johnpbloch/wordpress",
@@ -4409,6 +4409,59 @@
                 "console"
             ],
             "time": "2018-09-04T13:28:00+00:00"
+        },
+        {
+            "name": "wp-cli/server-command",
+            "version": "v2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-cli/server-command.git",
+                "reference": "b0c8db803aea2133973a9a35b0d94fb62487b456"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-cli/server-command/zipball/b0c8db803aea2133973a9a35b0d94fb62487b456",
+                "reference": "b0c8db803aea2133973a9a35b0d94fb62487b456",
+                "shasum": ""
+            },
+            "require": {
+                "wp-cli/wp-cli": "^2"
+            },
+            "require-dev": {
+                "wp-cli/wp-cli-tests": "^2.1"
+            },
+            "type": "wp-cli-package",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                },
+                "bundled": true,
+                "commands": [
+                    "server"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                },
+                "files": [
+                    "server-command.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Bachhuber",
+                    "email": "daniel@runcommand.io",
+                    "homepage": "https://runcommand.io"
+                }
+            ],
+            "description": "Launches PHP's built-in web server for a specific WordPress installation.",
+            "homepage": "https://github.com/wp-cli/server-command",
+            "time": "2019-11-12T11:32:15+00:00"
         },
         {
             "name": "wp-cli/wp-cli",
