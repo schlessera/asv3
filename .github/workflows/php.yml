@@ -8,11 +8,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: shivammathur/setup-php@v1
+
+    - name: Setup PHP version
+      uses: shivammathur/setup-php@v1
       with:
         php-version: '7.3'
 
-    - uses: actions/checkout@v1
+    - name: Checkout source code
+      uses: actions/checkout@v1
 
     - name: Create .env file
       run: |
@@ -28,7 +31,8 @@ jobs:
       run: |
         echo "::set-output name=dir::$(composer config cache-files-dir)"
 
-    - uses: actions/cache@v1
+    - name: Setup Composer cache
+      uses: actions/cache@v1
       with:
         path: ${{ steps.composer-cache.outputs.dir }}
         key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
