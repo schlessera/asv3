@@ -47,6 +47,14 @@ jobs:
     - name: Prepare environment
       run: composer prepare
 
+    - name: Configure Codeception environment
+      run: |
+        touch codeception.yml
+        echo "modules:" >> codeception.yml
+        echo "  config:" >> codeception.yml
+        echo "    PhpBrowser:" >> codeception.yml
+        echo "      url: http://localhost:8080" >> codeception.yml
+
     - name: Run WordPress server
       run: wp-content/vendor/bin/wp server &
 
