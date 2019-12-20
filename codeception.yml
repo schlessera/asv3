@@ -1,4 +1,0 @@
-modules:
-  config:
-    PhpBrowser:
-      url: https://asv3.localhost
