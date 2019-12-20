@@ -48,7 +48,7 @@ jobs:
       run: composer prepare
 
     - name: Run WordPress server
-      run: wp server > /dev/null 2>&1 &
+      run: wp server &
 
     - name: Run test suite
       run: composer test
