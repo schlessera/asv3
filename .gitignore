@@ -1,5 +1,6 @@
 ### WP Starter
 .env
+codeception.yml
 /wp-config.php
 wp/
 wp-content/
