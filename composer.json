@@ -27,9 +27,9 @@
 			"WCM\\WPStarter\\Setup::run"
 		],
 		"prepare": [
-			"wp db create",
-			"wp core install --url=https://asv2.localhost --title=asv3 --admin_user=admin --admin_email=alain.schlesser@gmail.com",
-			"wp theme activate asv3-theme"
+			"wp db create || true",
+			"wp core install --url=https://asv2.localhost --title=asv3 --admin_user=admin --admin_email=alain.schlesser@gmail.com || true",
+			"wp theme activate asv3-theme || true"
 		],
 		"test": [
 			"codecept run"
