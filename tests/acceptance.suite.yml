@@ -7,7 +7,8 @@
 actor: AcceptanceTester
 modules:
     enabled:
-        - PhpBrowser
+        - PhpBrowser:
+            url: https://asv3.lndo.site/
         - \Helper\Acceptance
     step_decorators: ~
 

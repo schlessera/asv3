@@ -1,0 +1,75 @@
+# WordPressDev, Copyright 2019 Google LLC
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+name: asv3
+
+recipe: wordpress
+
+config:
+  php: '7.4'
+  via: nginx
+  webroot: .
+  database: mariadb
+  xdebug: false
+
+env_file:
+  - .env.base
+  - .env
+
+services:
+  appserver:
+    install_dependencies_as_root:
+      - bash bin/install-dependencies.sh
+      # Allow loopback requests to work.
+      - echo "127.0.0.1  asv3.lndo.site" >> /etc/hosts
+    run:
+      - composer install
+
+tooling:
+  npm:
+    service: appserver
+  npx:
+    service: appserver
+  yarn:
+    service: appserver
+  grunt:
+    service: appserver
+    cmd: "npx grunt"
+  gulp:
+    service: appserver
+    cmd: "npx gulp"
+  composer:
+    service: appserver
+  git:
+    service: appserver
+  svn:
+    service: appserver
+  phpunit:
+    service: appserver
+  log:
+    service: appserver
+    cmd: "bash /app/bin/tail-php-error-log.sh"
+  wp:
+    service: appserver
+  xdebug-on:
+    service: appserver
+    description: Enable xdebug for nginx.
+    cmd: docker-php-ext-enable xdebug && pkill -o -USR2 php-fpm
+    user: root
+  xdebug-off:
+    service: appserver
+    description: Disable xdebug for nginx.
+    cmd: rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && pkill -o -USR2 php-fpm
+    user: root
+  codecept:
+    service: appserver
+    cmd: wp-content/vendor/bin/codecept

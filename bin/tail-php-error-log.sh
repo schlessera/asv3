@@ -1,3 +1,7 @@
+#!/bin/bash
+#
+# This script tails the debug log for WordPress.
+#
 # WordPressDev, Copyright 2019 Google LLC
 #
 # This program is free software: you can redistribute it and/or modify
@@ -10,25 +14,10 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 
-codeception.yml
-/wp-config.php
-wp/
-wp-content/
+if [[ ! -e /app/public/content/debug.log ]]; then
+    touch /app/public/content/debug.log
+fi
 
-.env
+echo 'Assuming WP_DEBUG_LOG enabled, tailing /app/public/content/debug.log...'
 
-[Tt]humbs.db
-[Dd]esktop.ini
-*.DS_store
-.DS_store?
-.lando.local.yml
-.lando.yml
-.idea
-.vscode
-
-*.sql
-*.sql.gz
-
-wp-config-local.php
-wp-tests-config-local.php
-wp-cli.local.yml
+tail -f /app/public/content/debug.log

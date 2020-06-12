@@ -1,3 +1,7 @@
+#!/bin/bash
+#
+# This scripts installs WordPressDev environment dependencies.
+#
 # WordPressDev, Copyright 2019 Google LLC
 #
 # This program is free software: you can redistribute it and/or modify
@@ -10,25 +14,19 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 
-codeception.yml
-/wp-config.php
-wp/
-wp-content/
+if [[ -z "$LANDO_MOUNT" ]]; then
+    echo "Error: Must be run the appserver.";
+    exit 1
+fi
 
-.env
+echo "Installing Dependencies"
 
-[Tt]humbs.db
-[Dd]esktop.ini
-*.DS_store
-.DS_store?
-.lando.local.yml
-.lando.yml
-.idea
-.vscode
+apt-get update -y
+apt-get -y install libyaml-dev
+yes | pecl install yaml
+echo 'extension=yaml.so' > /usr/local/etc/php/conf.d/yaml.ini
 
-*.sql
-*.sql.gz
+curl -sL https://deb.nodesource.com/setup_12.x | bash -
+apt-get install nodejs -y
 
-wp-config-local.php
-wp-tests-config-local.php
-wp-cli.local.yml
+apt-get install zip -y

@@ -28,7 +28,7 @@
 		],
 		"prepare": [
 			"wp db create || true",
-			"wp core install --url=https://asv2.localhost --title=asv3 --admin_user=admin --admin_email=alain.schlesser@gmail.com || true",
+			"wp core install --url=https://asv3.lndo.site --title=asv3 --admin_user=admin --admin_email=alain.schlesser@gmail.com || true",
 			"wp theme activate asv3-theme || true"
 		],
 		"test": [
