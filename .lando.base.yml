@@ -20,6 +20,8 @@ config:
   webroot: .
   database: mariadb
   xdebug: false
+  config:
+    php: config/php.ini
 
 env_file:
   - .env.base

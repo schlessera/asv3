@@ -14,10 +14,10 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 
-if [[ ! -e /app/public/content/debug.log ]]; then
-    touch /app/public/content/debug.log
+if [[ ! -e /app/wp-content/debug.log ]]; then
+    touch /app/wp-content/debug.log
 fi
 
-echo 'Assuming WP_DEBUG_LOG enabled, tailing /app/public/content/debug.log...'
+echo 'Assuming WP_DEBUG_LOG enabled, tailing /app/wp-content/debug.log...'
 
-tail -f /app/public/content/debug.log
+tail -f /app/wp-content/debug.log
