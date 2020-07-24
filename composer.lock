@@ -310,13 +310,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schlessera/asv3-theme.git",
-                "reference": "b1518514a2efdf70322ce277e63c8a787def97ab"
+                "reference": "fe4e4a6991044e2622c660e1123e85a1c3027b43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schlessera/asv3-theme/zipball/b1518514a2efdf70322ce277e63c8a787def97ab",
-                "reference": "b1518514a2efdf70322ce277e63c8a787def97ab",
+                "url": "https://api.github.com/repos/schlessera/asv3-theme/zipball/fe4e4a6991044e2622c660e1123e85a1c3027b43",
+                "reference": "fe4e4a6991044e2622c660e1123e85a1c3027b43",
                 "shasum": ""
+            },
+            "require": {
+                "ext-json": "*"
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "0.6.2",
@@ -348,7 +351,7 @@
                 }
             ],
             "description": "Theme for the homepage of the MWPD project.",
-            "time": "2020-07-24T14:15:36+00:00"
+            "time": "2020-07-24T15:56:44+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
