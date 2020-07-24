@@ -9,12 +9,17 @@
 		},
 		{
 			"type": "vcs",
+			"url": "https://github.com/schlessera/as-speaking"
+		},
+		{
+			"type": "vcs",
 			"url": "https://github.com/schlessera/asv3-theme"
 		}
 	],
 	"require": {
 		"wecodemore/wpstarter": "~2.0",
 		"schlessera/asv3-theme": "dev-master",
+		"schlessera/as-speaking": "dev-master",
 		"wpackagist-plugin/amp":"^1.5.5"
 	},
 	"config": {

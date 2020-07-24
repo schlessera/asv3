@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb47ac5e9950522dce41c3236d16e143",
+    "content-hash": "1285ea1f295ef8e69e545506d9162359",
     "packages": [
         {
             "name": "composer/installers",
@@ -272,6 +272,37 @@
                 "wordpress"
             ],
             "time": "2020-04-16T21:44:57+00:00"
+        },
+        {
+            "name": "schlessera/as-speaking",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schlessera/as-speaking.git",
+                "reference": "0f2b838c3c4e89655179deacc7e4d044b2a629ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schlessera/as-speaking/zipball/0f2b838c3c4e89655179deacc7e4d044b2a629ee",
+                "reference": "0f2b838c3c4e89655179deacc7e4d044b2a629ee",
+                "shasum": ""
+            },
+            "type": "wordpress-plugin",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alain Schlesser",
+                    "email": "alain.schlesser@gmail.com"
+                }
+            ],
+            "description": "WordPress plugin to manage an archive of your talks",
+            "support": {
+                "source": "https://github.com/schlessera/as-speaking/tree/master",
+                "issues": "https://github.com/schlessera/as-speaking/issues"
+            },
+            "time": "2020-07-24T14:44:02+00:00"
         },
         {
             "name": "schlessera/asv3-theme",
@@ -5228,7 +5259,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "schlessera/asv3-theme": 20
+        "schlessera/asv3-theme": 20,
+        "schlessera/as-speaking": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
