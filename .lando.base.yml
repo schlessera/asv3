@@ -19,7 +19,7 @@ config:
   via: nginx
   webroot: .
   database: mariadb
-  xdebug: false
+  xdebug: true
   config:
     php: config/php.ini
 
