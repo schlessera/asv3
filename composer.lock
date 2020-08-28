@@ -310,12 +310,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schlessera/asv3-theme.git",
-                "reference": "cbb4603bcc3b17cad429bc5e4fee422c109227fb"
+                "reference": "f5fd19b3010402600fe8e105ceef7a885072e399"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schlessera/asv3-theme/zipball/cbb4603bcc3b17cad429bc5e4fee422c109227fb",
-                "reference": "cbb4603bcc3b17cad429bc5e4fee422c109227fb",
+                "url": "https://api.github.com/repos/schlessera/asv3-theme/zipball/f5fd19b3010402600fe8e105ceef7a885072e399",
+                "reference": "f5fd19b3010402600fe8e105ceef7a885072e399",
                 "shasum": ""
             },
             "require": {
@@ -350,7 +350,7 @@
                 }
             ],
             "description": "Theme for the homepage of the MWPD project.",
-            "time": "2020-08-28T17:03:16+00:00"
+            "time": "2020-08-28T18:46:52+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
