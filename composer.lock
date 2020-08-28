@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2facd78138158958d688f8bf5ac3a2c4",
+    "content-hash": "1285ea1f295ef8e69e545506d9162359",
     "packages": [
         {
             "name": "composer/installers",
@@ -310,12 +310,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schlessera/asv3-theme.git",
-                "reference": "8a8e9ec659002801b59830382787f87974fe767c"
+                "reference": "cbb4603bcc3b17cad429bc5e4fee422c109227fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schlessera/asv3-theme/zipball/8a8e9ec659002801b59830382787f87974fe767c",
-                "reference": "8a8e9ec659002801b59830382787f87974fe767c",
+                "url": "https://api.github.com/repos/schlessera/asv3-theme/zipball/cbb4603bcc3b17cad429bc5e4fee422c109227fb",
+                "reference": "cbb4603bcc3b17cad429bc5e4fee422c109227fb",
                 "shasum": ""
             },
             "require": {
@@ -350,7 +350,7 @@
                 }
             ],
             "description": "Theme for the homepage of the MWPD project.",
-            "time": "2020-08-28T16:39:04+00:00"
+            "time": "2020-08-28T17:03:16+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -590,15 +590,15 @@
         },
         {
             "name": "wpackagist-plugin/amp",
-            "version": "2.0.0",
+            "version": "1.5.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/amp/",
-                "reference": "tags/2.0.0"
+                "reference": "tags/1.5.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/amp.2.0.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/amp.1.5.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2488,6 +2488,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2019-09-17T06:23:10+00:00"
         },
         {
